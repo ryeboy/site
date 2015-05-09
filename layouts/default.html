@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A Brand New nanoc Site - <%= @item[:title] %></title>
+    <link rel="stylesheet" href="<%= @items['/stylesheet/'].path %>">
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
+  </head>
+  <body>
+    <div id="main">
+      <div id="header">
+        <a id="logo"><img src="/images/logo.png"></img></a>
+        <ul id="navigation">
+          <li><a href="/">首页</a></li>
+          <li><a href="/about-us">关于我们</a></li>
+          <li><a href="/cases">学员案例</a></li>
+          <li><a href="/faq">常见问题</a></li>
+          <li class="entrance"><a href="http://wenda.siwuxie.org/" target="_blank">进入社区</a></li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
