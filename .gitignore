@@ -1,1 +1,4 @@
+output
 output/*
+crash.log
+tmp/*
